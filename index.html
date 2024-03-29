@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SUDOKU</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>SUDOKU</h1>
+        <h2 id="slogan"></h2>
+        <div class="player-info">
+            <div>
+                <label for="player-name">Player Name:</label>
+                <input type="text" id="player-name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="board-size">Board Size:</label>
+                <select id="board-size">
+                    <option value="4">4x4</option>
+                    <option value="6">6x6</option>
+                    <option value="9" selected>9x9</option>
+                </select>
+            </div>
+            <div>
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="theme1">Theme 1</option>
+                    <option value="theme2">Theme 2</option>
+                    <!-- Add more theme options here -->
+                </select>
+            </div>
+            <div id="timer">00:00:00</div>
+        </div>
+    </header>
+
+    <main>
+        <div id="board-container"></div>
+        <div class="controls">
+            <button id="start-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+            <button id="solve-btn" disabled>Solve</button>
+            <button id="hide-solution-btn" style="display: none;">Hide Solution</button>
+        </div>
+        <div id="solution-board"></div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
