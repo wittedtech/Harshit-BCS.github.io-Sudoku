@@ -202,9 +202,9 @@ function updateSolutionBoard() {
 function highlightIncorrectInputs() {
     const cells = boardContainer.querySelectorAll('.cell');
     cells.forEach((cell, index) => {
-        const userInput = cell.textContent.trim();
+        const userInput = parseInt(cell.textContent.trim());
         const correctValue = solvedBoard[index];
-        if (userInput !== '' && userInput !== correctValue && board[index] === 0) {
+        if (userInput !== '' && userInput !== isNaN && userInput !== correctValue && board[index] === 0) {
             cell.classList.add('incorrect');
         } else {
             cell.classList.remove('incorrect');
@@ -269,9 +269,9 @@ function checkSolution() {
     let isSolved = true;
 
     cells.forEach((cell, index) => {
-        const userInput = cell.textContent.trim();
+        const userInput = parseInt(cell.textContent.trim());
         const correctValue = solvedBoard[index];
-        if (userInput !== correctValue) {
+        if (userInput !== correctValue && userInput !== isNaN) {
             isSolved = false;
         }
     });
@@ -341,7 +341,7 @@ cells.forEach(cell => {
 // Check for solved puzzle after every user input
 cells.forEach(cell => {
     cell.addEventListener('input', () => {
-        if (checkSolution() && solutionShown) {
+        if (checkSolution()) {
             showCelebrationModal();
         }
     });
