@@ -193,6 +193,7 @@ function updateSolutionBoard() {
     }
 
     // Set solution board dimensions
+    solutionBoard.style.display = 'grid';
     solutionBoard.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     solutionBoard.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 }
