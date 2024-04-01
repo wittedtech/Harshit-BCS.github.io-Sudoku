@@ -1,0 +1,232 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+.player-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.player-info > div {
+    margin: 0 10px;
+}
+
+label {
+    margin-right: 5px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#board-container {
+    display: grid;
+    grid-gap: 2px;
+    background-color: #000;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.controls button {
+    margin: 5px 0;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.controls button:hover {
+    opacity: 0.8;
+}
+
+.controls button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+#solution-board {
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Board styles */
+.cell {
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.solution-cell {
+    color: #fff;
+}
+
+.default-value {
+    background-color: #0f0;
+    color: #fff;
+}
+
+.user-input {
+    background-color: #00f;
+    color: #fff;
+}
+
+.incorrect {
+    background-color: #f00;
+    color: #fff;
+}
+
+.solution-value {
+    background-color: #ff0;
+    color: #000;
+}
+
+/* Theme styles */
+.theme1 {
+    background: linear-gradient(45deg, #333, #666);
+}
+
+.theme1 header {
+    background: linear-gradient(45deg, #444, #777);
+}
+
+.theme1 .controls button {
+    background: linear-gradient(45deg, #555, #888);
+}
+
+.theme1 .controls button:hover {
+    background: linear-gradient(45deg, #666, #999);
+}
+
+.theme2 {
+    background: linear-gradient(45deg, #1e90ff, #87cefa);
+}
+
+.theme2 header {
+    background: linear-gradient(45deg, #00bfff, #add8e6);
+}
+
+.theme2 .controls button {
+    background: linear-gradient(45deg, #00ced1, #87ceeb);
+}
+
+.theme2 .controls button:hover {
+    background: linear-gradient(45deg, #00fa9a, #afeeee);
+}
+
+.theme3 {
+    background: linear-gradient(45deg, #8b008b, #ff69b4);
+}
+
+.theme3 header {
+    background: linear-gradient(45deg, #ba55d3, #ff1493);
+}
+
+.theme3 .controls button {
+    background: linear-gradient(45deg, #da70d6, #ffc0cb);
+}
+
+.theme3 .controls button:hover {
+    background: linear-gradient(45deg, #ee82ee, #ffb6c1);
+}
+
+.theme4 {
+    background: linear-gradient(45deg, #556b2f, #8fbc8f);
+}
+
+.theme4 header {
+    background: linear-gradient(45deg, #698b69, #98fb98);
+}
+
+.theme4 .controls button {
+    background: linear-gradient(45deg, #7cfc00, #adff2f);
+}
+
+.theme4 .controls button:hover {
+    background: linear-gradient(45deg, #9acd32, #c0ff3e);
+}
+
+.theme5 {
+    background: linear-gradient(45deg, #800000, #ffa07a);
+}
+
+.theme5 header {
+    background: linear-gradient(45deg, #b22222, #ffa500);
+}
+
+.theme5 .controls button {
+    background: linear-gradient(45deg, #ff6347, #ffd700);
+}
+
+.theme5 .controls button:hover {
+    background: linear-gradient(45deg, #ff8c00, #ffc107);
+}
+
+#celebration {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    text-align: center;
+}
+
+#celebration h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#celebration button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#celebration button:hover {
+    background-color: #555;
+}

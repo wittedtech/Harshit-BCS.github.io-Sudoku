@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SUDOKU</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="theme1">
     <header>
         <h1>SUDOKU</h1>
         <h2 id="slogan"></h2>
@@ -22,13 +22,14 @@
                     <option value="6">6x6</option>
                     <option value="9" selected>9x9</option>
                 </select>
-            </div>
-            <div>
+            </            <div>
                 <label for="theme-select">Theme:</label>
                 <select id="theme-select">
                     <option value="theme1">Theme 1</option>
                     <option value="theme2">Theme 2</option>
-                    <!-- Add more theme options here -->
+                    <option value="theme3">Theme 3</option>
+                    <option value="theme4">Theme 4</option>
+                    <option value="theme5">Theme 5</option>
                 </select>
             </div>
             <div id="timer">00:00:00</div>
@@ -46,6 +47,11 @@
         <div id="solution-board"></div>
     </main>
 
-    <script src="script.js"></script>
+    <div id="celebration" style="display: none;">
+        <h2>Congratulations! You solved the puzzle!</h2>
+        <button id="close-celebration">Close</button>
+    </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
